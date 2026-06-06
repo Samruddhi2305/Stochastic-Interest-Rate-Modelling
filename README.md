@@ -5,7 +5,7 @@ This repository implements, calibrates, and extends the **Cox-Ingersoll-Ross (CI
 
 ---
 
-## 📌 Project Objectives & Milestones
+## Project Objectives & Milestones
 
 1. **Data Engineering & Preprocessing:** Cleaned daily Zero-Coupon yield curve data, handled missing values via linear interpolation, and implemented a robust **Hampel Filter** (rolling median with Median Absolute Deviation) to smooth outliers.
 2. **Base CIR Model Calibration:** Implemented and compared three distinct calibration methodologies:
@@ -18,7 +18,7 @@ This repository implements, calibrates, and extends the **Cox-Ingersoll-Ross (CI
 
 ---
 
-## 📊 Summary of Results
+## Summary of Results
 
 The model was calibrated on historical daily yield curve data from **May 2016 to April 2024** (1,976 records) and tested out-of-sample from **April 2024 to April 2026** (495 records). Below is a comparison of the calibration results:
 
@@ -48,7 +48,7 @@ The model was calibrated on historical daily yield curve data from **May 2016 to
 
 ---
 
-## 📈 Key Insights & Analysis
+## Key Insights & Analysis
 
 ### 1. Sensitivity to Calibration Methodology
 * **Physical $\mathbb{P}$-measure Calibration (OLS/MLE):** Calibrates the parameters solely using the historical time series of the short rate. OLS results in a negative mean reversion speed ($\kappa < 0$), which violates the fundamental stability of the CIR model and leads to catastrophic out-of-sample predictions. MLE calibrates stable parameters but systematically overestimates long-term yields because it lacks adjustment for the **market price of risk ($\lambda$)**.
@@ -65,7 +65,7 @@ The model was calibrated on historical daily yield curve data from **May 2016 to
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 * `Stochastic_Interest_Rate_Modelling.ipynb`: The main Google Colab-compatible notebook containing the full codebase, mathematical derivations, outputs, and visualizations.
 * `data/`: Directory containing the training and test CSV files.
@@ -78,7 +78,7 @@ The model was calibrated on historical daily yield curve data from **May 2016 to
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone this repository:
    ```bash
